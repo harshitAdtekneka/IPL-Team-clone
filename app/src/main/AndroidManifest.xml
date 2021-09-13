@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cricket.ipl2021.iplteamclone">
+
+    <application
+        android:name="com.cricket.ipl2021.iplteamclone.Utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IPLTeam"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.FieldingPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.BowlingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.OtherPointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.BattingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.FantasyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.OtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.PredictionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.TeamActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cricket.ipl2021.iplteamclone.Activity.SplashScreenActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+    </application>
+
+</manifest>
