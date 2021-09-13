@@ -58,8 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.tvTeam.setOnClickListener(this);
         mainBinding.tvPredictor.setOnClickListener(this);
         mainBinding.tvFantasy.setOnClickListener(this);
-        mainBinding.ivRate.setOnClickListener(this);
-        mainBinding.ivShare.setOnClickListener(this);
+        mainBinding.tvAdTxtMain.setOnClickListener(this);
+        mainBinding.llRate.setOnClickListener(this);
+        mainBinding.llShare.setOnClickListener(this);
 
         BannerAds.showBannerAds(myApplication, MainActivity.this, mainBinding.adView);
         refreshAd();
@@ -80,11 +81,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 PopUpAdsFull.showInterstitialAds(myApplication, MainActivity.this, MainActivity.this, "Fantasy", 0);
 
                 break;
-            case R.id.iv_rate:
+            case R.id.ll_rate:
                 openRateDialog();
                 break;
-            case R.id.iv_share:
+            case R.id.ll_share:
                 openShareDialog();
+                break;
+            case R.id.tvAdTxtMain:
+                Constants.QurekaAd(MainActivity.this);
                 break;
         }
     }
@@ -226,7 +230,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (nativeAd != null) {
             nativeAd.destroy();
         }
-        if (mHandler != null) { mHandler.removeCallbacks(mRunnable); }
+        if (mHandler != null) {
+            mHandler.removeCallbacks(mRunnable);
+        }
         super.onDestroy();
     }
 
@@ -253,11 +259,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onIntentClick(String type) {
-        if (type.equals("Team")){
+        if (type.equals("Team")) {
             startActivity(new Intent(MainActivity.this, TeamActivity.class));
-        }else if (type.equals("Prediction")){
+        } else if (type.equals("Prediction")) {
             startActivity(new Intent(MainActivity.this, PredictionActivity.class));
-        }else if(type.equals("Fantasy")){
+        } else if (type.equals("Fantasy")) {
             startActivity(new Intent(MainActivity.this, FantasyActivity.class));
         }
     }

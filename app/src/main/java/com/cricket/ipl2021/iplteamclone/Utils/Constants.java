@@ -57,28 +57,27 @@ public class Constants {
     public static String Pref_MatchIndex = "pref_match_index";
 
 
-    public static String CSK = "Chennai Super Kings";
-    public static String DC = "Delhi Capitals";
-    public static String KKR = "Kolkata Knight Riders";
-    public static String MI = "Mumbai Indians";
-    public static String PK = "Punjab Kings";
-    public static String RR = "Rajasthan Royals";
-    public static String RCB = "Royal Challengers Bangalore";
-    public static String SRH = "Sunrisers Hydrabad";
+    public static String CSK = "Chennai Super\nKings";
+    public static String DC = "Delhi\nCapitals";
+    public static String KKR = "Kolkata Knight\nRiders";
+    public static String MI = "Mumbai\nIndians";
+    public static String PK = "Punjab\nKings";
+    public static String RR = "Rajasthan\nRoyals";
+    public static String RCB = "Royal Challengers\nBangalore";
+    public static String SRH = "Sunrisers\nHydrabad";
 
     public static int teamLogoArray[] = {R.drawable.csk_logo,
-            R.drawable.mi_logo,
             R.drawable.rcb_logo,
-            R.drawable.rr_logo,
-            R.drawable.dc_logo,
-            R.drawable.kkr_logo,
+            R.drawable.mi_logo,
             R.drawable.pk_logo,
+            R.drawable.rr_logo,
             R.drawable.srh_logo,
+            R.drawable.dc_logo,
+            R.drawable.kkr_logo
     };
 
-    public static String teamNameArray[] = {CSK, MI, RCB, RR, DC, KKR, PK, SRH};
-    public static int teamColorArray[] = {R.color.csk, R.color.mi, R.color.rcb, R.color.rr, R.color.dc, R.color.kkr, R.color.pk, R.color.srh};
-    public static String fantasyArray[] = {"T20","OD","TEST","T10"};
+    public static String teamNameArray[] = {CSK, RCB, MI,PK, RR, SRH, DC, KKR};
+    public static int teamColorArray[] = {R.color.csk, R.color.rcb, R.color.mi, R.color.pk, R.color.rr, R.color.srh, R.color.dc, R.color.kkr};
 
     public static void QurekaAd(Context context) {
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
@@ -88,18 +87,4 @@ public class Constants {
         customTabsIntent.launchUrl(context, Uri.parse(BuildConfig.QUREKA_URL));
     }
 
-    public static GradientDrawable backGrad(int color1, int color2) {
-        int[] colors = new int[2];
-        colors[0] = color1;
-        colors[1] = color2;
-
-
-        GradientDrawable gd = new GradientDrawable(
-                GradientDrawable.Orientation.TOP_BOTTOM, colors);
-
-        gd.setGradientType(GradientDrawable.RADIAL_GRADIENT);
-        gd.setGradientRadius(300f);
-        gd.setCornerRadius(0f);
-        return gd;
-    }
 }

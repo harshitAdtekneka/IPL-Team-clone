@@ -9,42 +9,44 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_700"
+        android:layout_height="80dp"
+        android:background="@drawable/tool_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:layout_marginBottom="6dp"
             android:src="@drawable/ic_arrow" />
 
         <TextView
+            android:layout_marginTop="5dp"
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
+            android:layout_height="48dp"
             android:layout_toLeftOf="@id/iv_ad"
             android:layout_toRightOf="@id/iv_back"
+            android:gravity="center"
             android:letterSpacing="0.05"
             android:singleLine="true"
-            android:text="Fielding Points"
+            android:text="@string/fielding_points"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/iv_ad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="10dp"
             android:adjustViewBounds="true"
             android:gravity="center" />
 
@@ -57,6 +59,7 @@
         android:layout_below="@id/relativeLayout">
 
         <LinearLayout
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -66,11 +69,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/white"
+               app:cardBackgroundColor="@color/purple_700"
                 app:cardCornerRadius="3dp"
                 app:cardElevation="5dp">
 
                 <FrameLayout
+                    android:padding="2dp"
                     android:id="@+id/rl_ad"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">

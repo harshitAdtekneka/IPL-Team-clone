@@ -26,6 +26,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import cz.msebera.android.httpclient.Header;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -42,12 +45,12 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         myApplication = MyApplication.getInstance();
 
+
         if (NetworkUtils.isConnected(SplashScreenActivity.this)) {
             checkLicense();
         } else {
             Toast.makeText(myApplication, getResources().getString(R.string.check_internet), Toast.LENGTH_SHORT).show();
         }
-
 
     }
 
@@ -95,7 +98,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         RequestParams params = new RequestParams();
         JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API());
         jsObj.addProperty("method_name", Constants.ADS_METHOD);
-        jsObj.addProperty("package_name", BuildConfig.APPLICATION_ID);
+        jsObj.addProperty("package_name", /*BuildConfig.APPLICATION_ID*/"com.cricket.ipl2021.iplteam");
         params.put("data", API.toBase64(jsObj.toString()));
         client.post(Constants.API_URL, params, new AsyncHttpResponseHandler() {
 

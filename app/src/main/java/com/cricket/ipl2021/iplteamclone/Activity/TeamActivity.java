@@ -57,7 +57,7 @@ public class TeamActivity extends AppCompatActivity implements IntentOnClickList
             }
         });
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(TeamActivity.this, 1, RecyclerView.VERTICAL, false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(TeamActivity.this, 2, RecyclerView.VERTICAL, false);
         teamBinding.rvList.setLayoutManager(gridLayoutManager);
         TeamAdapter teamAdapter = new TeamAdapter(TeamActivity.this);
         teamBinding.rvList.setAdapter(teamAdapter);

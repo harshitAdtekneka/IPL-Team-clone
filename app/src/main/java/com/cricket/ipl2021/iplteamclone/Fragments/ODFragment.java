@@ -48,6 +48,7 @@ public class ODFragment extends Fragment implements View.OnClickListener, Intent
         fragmentLaoutBinding.cvBowling.setOnClickListener(this::onClick);
         fragmentLaoutBinding.cvFielding.setOnClickListener(this::onClick);
         fragmentLaoutBinding.cvOther.setOnClickListener(this::onClick);
+        fragmentLaoutBinding.tvAdTxtMain.setOnClickListener(this::onClick);
         refreshAd();
         return view;
     }
@@ -79,6 +80,9 @@ public class ODFragment extends Fragment implements View.OnClickListener, Intent
 
             case R.id.cv_other:
                 PopUpAdsFull.showInterstitialAds(myApplication, getActivity(), this, "od", 3);
+                break;
+            case R.id.tvAdTxtMain:
+                Constants.QurekaAd(getActivity());
                 break;
         }
     }

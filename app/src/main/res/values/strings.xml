@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">IPL Team</string>
+    <string name="app_name">IPL Team Clone</string>
     <string name="check_internet">Please check internet connection..</string>
 
     <!--Test Id-->
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="admob_native_id">ca-app-pub-3940256099942544/2247696110</string>
+
     <string name="sponsored">Sponsored</string>
     <string name="ad_txt">Ad</string>
     <string name="schedule">Schedule</string>
@@ -13,6 +13,11 @@
     <string name="share_app">Share App</string>
     <string name="rate_app">Rate App</string>
     <string name="teams">Teams</string>
+    <string name="ipl_prediction">IPL Prediction</string>
+    <string name="batting_points">Batting Points</string>
+    <string name="bowling_points">Bowling Points</string>
+    <string name="fielding_points">Fielding Points</string>
+    <string name="other_points">Other Points</string>
 
 
 </resources>
